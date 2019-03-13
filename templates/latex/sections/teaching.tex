@@ -1,13 +1,21 @@
 ~< extends "section.tex" >~
 
 ~< block body >~
-    ~< for item in items >~
-        \cvlistitem{
-          << item.name >>
-          (<< item.short >>),
-          << item.position >>
-          \hfill
-          << item.semester>>
-        }
-    ~< endfor >~
+
+~< for s in items.subsections >~
+    \subsection{<<s.heading>>}
+    ~< for item in s.subitems >~
+        ~< if item.position >~
+            << item.position >> -- << item.course >>, << item.short >>
+        ~< elif item.student >~
+            << item.student >>, << item.title >>, << item.affiliation >>
+        ~< elif item.venue >~
+            << item.name >>, \small{\emph{<< item.venue >>, << item.location >>}}
+        ~< endif >~
+        \hfill
+        << item.dates>>
+        \newline
+    ~< endfor >~    
+~< endfor >~
+    
 ~< endblock body >~

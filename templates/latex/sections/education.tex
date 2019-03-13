@@ -2,16 +2,13 @@
 
 ~< block body >~
 ~< for school in items >~
-\cvlistitem{
+
   ~< if school.degree >~
-    << school.degree >>,
-  ~< endif >~
-  << school.school >>
-  ~< if school.overallGPA >~
-    (<< school.overallGPA >>)
+    \textbf{<< school.degree >>}
   ~< endif >~
   \hfill
-  << school.dates >>
-}
+  << school.dates >> \newline
+  \small{\emph{<< school.school >>, << school.location >>}}
+
 ~< endfor >~
 ~< endblock body >~

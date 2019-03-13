@@ -2,11 +2,16 @@
 
 ~< block body >~
     ~< for item in items >~
-        \cvlistitem{
-          << item.place >>, << item.advisor >> \hfill << item.dates >>
+          \textbf{<< item.title >> -- << item.place >>} \hfill << item.dates >> \newline
+          \small{\emph{<< item.location >>}}
+          ~< if item.advisor >~
+          \newline
+          Advisor: << item.advisor >>
+          ~< endif >~
           \begin{itemize}
-          \item << item.area >>
+          ~< for t in item.area >~
+            \item << t >>
+          ~< endfor >~
           \end{itemize}
-        }
     ~< endfor >~
 ~< endblock body >~
