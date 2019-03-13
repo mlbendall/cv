@@ -1,0 +1,12 @@
+~< extends "section.tex" >~
+
+~< block body >~
+    ~< for item in items >~
+          \href{<< item.url >>}{\textbf{<< item.title >>}} \hfill << item.dates >> \newline
+          ~< if item.role >~
+          \emph{<< item.role >>}.
+          ~< endif >~
+          << item.description >>
+          \newline
+    ~< endfor >~
+~< endblock body >~
