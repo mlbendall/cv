@@ -63,7 +63,7 @@ selected_publications:
 research:
   - title: Research Assistant
     place: Computational Biology Institute
-    location: George Washington University, Washington DC
+    location: George Washington University Milken Institute School of Public Health, Washington DC
     advisor: Keith A. Crandall
     dates: Aug 2014 -- Present
     area:
@@ -72,9 +72,9 @@ research:
         - Developed computational pipelines for HIV haplotype assembly and phylodynamics
   - title: Research Assistant
     place: Nixon Lab
-    location: Weill Cornell Medicine, New York, NY
+    location: George Washington University School of Medicine \& Health Sciences, Washington DC
     advisor: Douglas F. Nixon    
-    dates: Jan 2015 -- Present
+    dates: Jan 2015 -- July 2018
     area:
         - Developed approach for quantifying transposable element expression using RNA-seq
         - Analyzed HERV expression profiles in neurodevelopment, psychiatry, and embryonic development
